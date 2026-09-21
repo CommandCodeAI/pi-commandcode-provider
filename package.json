@@ -1,0 +1,50 @@
+{
+	"name": "@commandcode/pi-commandcode-provider",
+	"version": "0.3.0",
+	"description": "Official Command Code provider for pi: every model behind one key, with the model list read live from the Command Code API",
+	"license": "Apache-2.0",
+	"type": "module",
+	"keywords": [
+		"pi",
+		"pi-package",
+		"pi-extension",
+		"command-code",
+		"llm",
+		"provider"
+	],
+	"homepage": "https://commandcode.ai",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CommandCodeAI/pi-commandcode-provider.git"
+	},
+	"bugs": {
+		"url": "https://github.com/CommandCodeAI/pi-commandcode-provider/issues"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		"index.ts",
+		"README.md"
+	],
+	"scripts": {
+		"check": "tsc --noEmit",
+		"test": "node test.ts",
+		"test:live": "node test.ts --live"
+	},
+	"pi": {
+		"extensions": [
+			"./index.ts"
+		]
+	},
+	"peerDependencies": {
+		"@earendil-works/pi-ai": "*",
+		"@earendil-works/pi-coding-agent": "*"
+	},
+	"devDependencies": {
+		"@earendil-works/pi-ai": "^0.86.0",
+		"@earendil-works/pi-coding-agent": "^0.86.0",
+		"@types/node": "^26.0.0",
+		"typescript": "^5.9.3"
+	}
+}
